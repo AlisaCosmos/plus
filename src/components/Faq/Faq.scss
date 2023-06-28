@@ -1,0 +1,41 @@
+@import "../../styles/_vars.scss";
+
+.faq__inner {
+    margin-bottom: 80px;
+    .faq__header {
+        color: $accentColor;
+        margin-bottom: 45px;
+    }
+    .faq__items {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    // up to 959px
+    .faq__inner {
+        margin-bottom: 50px;
+        .faq__header {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: $smallTablet) {
+    .faq__inner {
+        .faq__header {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    // up to 480px
+    .faq__inner {
+        margin-bottom: 25px;
+        .faq__header {
+            margin-bottom: 7px;
+        }
+    }
+}

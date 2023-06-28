@@ -1,0 +1,71 @@
+@import "../../styles/_vars.scss";
+
+.cases__content {
+    display: flex;
+    width: 100%;
+    min-width: 730px;
+}
+
+.cases__header {
+    margin-bottom: 29px;
+}
+
+.cases__leftSide {
+    width: 60%;
+    margin-right: 20px;
+}
+
+.cases__rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+}
+
+.cases__img {
+    position: relative;
+    width: 100%;
+}
+
+@media screen and (max-width: 1130px) {
+    .cases__content {
+        display: flex;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .cases__header {
+        margin-bottom: 36px;
+    }
+
+    .cases__leftSide {
+        max-width: 55%;
+        margin-right: 6px;
+    }
+
+    .cases__rightSide {
+        max-width: 45%;
+    }
+
+    .cases__img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .cases__header {
+        margin-bottom: 26px;
+    }
+
+    .cases__leftSide {
+        margin-right: 9px;
+    }
+}
+
+@media screen and (max-width: $smallMobile) {
+    .cases__leftSide {
+        margin-right: 5px;
+    }
+}

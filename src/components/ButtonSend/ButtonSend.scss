@@ -1,0 +1,225 @@
+@import "../../styles/_vars.scss";
+
+.buttonSend {
+  overflow: hidden;
+}
+
+.buttonSend__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.buttonSend__arrowWrapper {
+  width: 0;
+  height: 17px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  align-items: center;
+  align-content: center;
+  transition: width 0.1s ease-in-out;
+}
+
+.buttonSend:hover .buttonSend__arrowWrapper {
+  width: 17px;
+  overflow: visible;
+}
+
+.buttonSend:hover .buttonSend__arrowWrapper_active {
+  width: 0;
+}
+
+.buttonSend__arrow {
+  width: 17px;
+  margin-left: 10px;
+  transition: transform 500ms ease;
+  &_bigger {
+    width: 20px;
+  }
+}
+
+.buttonSend__arrow_active {
+  transform: translateX(1000%);
+}
+
+.buttonSend__checkWrapper {
+  position: relative;
+  display: none;
+}
+
+.buttonSend__checkWrapper_active {
+  display: block;
+}
+
+.buttonSend__check {
+  position: absolute;
+  width: 14px;
+  top: -5px;
+  right: 0;
+}
+
+.buttonSend__checkWrapper_bigger .buttonSend__check {
+  width: 16px;
+  top: -7px;
+}
+
+.buttonSend__sendedText {
+  margin-right: 22px;
+
+  &_capital {
+    text-transform: uppercase;
+  }
+}
+
+// style for request modal
+.btn__requestmodal {
+  .buttonSend__arrowWrapper {
+    width: 0;
+    height: 17px;
+    overflow: hidden;
+  }
+
+  &:hover .buttonSend__arrowWrapper {
+    width: 17px;
+    overflow: visible;
+  }
+
+  .buttonSend__arrow {
+    width: 17px;
+    margin-left: 10px;
+    transition: transform 500ms ease;
+  }
+
+  .buttonSend__check {
+    position: absolute;
+    width: 14px;
+    top: -6px;
+    right: 0;
+  }
+
+  .buttonSend__sendedText {
+    margin-right: calc(14px + 9px);
+  }
+}
+
+.buttonSend__requestmodal_focus .buttonSend__arrowWrapper {
+  width: 17px;
+  overflow: visible;
+}
+
+@media screen and (max-width: 1000px),
+  screen and (orientation: landscape) and (min-height: 550px) and (max-height: 700px) {
+  .btn__requestmodal {
+    .buttonSend__check {
+      position: absolute;
+      width: 14px;
+      top: -6px;
+      right: 0;
+    }
+
+    .buttonSend__sendedText {
+      margin-right: calc(14px + 9px);
+    }
+  }
+}
+
+@media screen and (max-width: 700px),
+  screen and (orientation: landscape) and (max-height: 550px) and (min-aspect-ratio: 1/1) {
+  .btn__requestmodal {
+    .buttonSend__check {
+      position: absolute;
+      width: 10px;
+      top: -5px;
+      right: 0;
+    }
+
+    .buttonSend__sendedText {
+      margin-right: calc(10px + 4px);
+    }
+  }
+}
+
+// style for help modal
+.btn__helpmodal {
+  .buttonSend__arrowWrapper {
+    width: 0;
+    height: 20px;
+    overflow: hidden;
+  }
+
+  &:hover .buttonSend__arrowWrapper {
+    width: 20px;
+    overflow: visible;
+  }
+
+  .buttonSend__arrow {
+    width: 20px;
+    margin-left: 10px;
+    transition: transform 500ms ease;
+  }
+
+  .buttonSend__check {
+    position: absolute;
+    width: 16px;
+    top: -7px;
+    right: 0;
+  }
+
+  .buttonSend__sendedText {
+    margin-right: calc(16px + 8px);
+  }
+}
+
+.buttonSend__helpmodal_focus .buttonSend__arrowWrapper {
+  width: 20px;
+  overflow: visible;
+}
+
+@media screen and (max-width: $tablet) {
+  .btn__helpmodal {
+    .buttonSend__check {
+      position: absolute;
+      width: 16px;
+      top: -7px;
+      right: 0px;
+    }
+
+    .buttonSend__sendedText {
+      margin-right: calc(16px + 8px);
+    }
+  }
+}
+
+@media screen and (max-width: 850px),
+  screen and (orientation: landscape) and (min-height: 580px) and (max-height: 700px) {
+  .btn__helpmodal {
+    .buttonSend__check {
+      position: absolute;
+      width: 16px;
+      top: -7px;
+      right: 0px;
+    }
+
+    .buttonSend__sendedText {
+      margin-right: calc(16px + 4px);
+    }
+  }
+}
+
+@media screen and (max-width: 550px), screen and (orientation: landscape) and (max-height: 580px) {
+  .btn__helpmodal {
+    .buttonSend__check {
+      position: absolute;
+      width: 9px;
+      top: -4px;
+      right: 0px;
+    }
+
+    .buttonSend__sendedText {
+      margin-right: calc(9px + 4px);
+    }
+  }
+}

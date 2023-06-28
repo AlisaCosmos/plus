@@ -1,0 +1,367 @@
+@import "../../styles/_vars.scss";
+
+.header {
+    background-color: $bgColor_dark;
+    height: 90px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $textColor;
+}
+
+.header__logo {
+    align-self: start;
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.header__logoIcon {
+    width: 70px;
+}
+
+.header__nav {
+    flex: 1 0 auto;
+}
+
+.header__linksAndButtons {
+    display: flex;
+}
+
+.header__links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    // gap: 5px;
+    flex: 1 0 auto;
+}
+
+.header__link {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header__calc {
+    margin-left: 14px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+
+    &:focus-visible .header__calcText {
+        color: $accentColor;
+    }
+}
+
+@media (hover: hover) {
+    .header__calc:hover .header__calcText {
+        cursor: pointer;
+        color: $accentColor;
+        transition: color 0.1s ease;
+    }
+}
+
+@media (hover: none) {
+    .header__calc:hover .header__calcText {
+        color: #ffffff;
+    }
+    .header__calc:active .header__calcText {
+        color: $accentColor;
+    }
+}
+
+.header__calcIcon {
+    fill: #ffffff;
+    width: 32px;
+}
+.header__calcIcon_focus {
+    fill: $accentColor;
+}
+
+@media (hover: hover) {
+    .header__calcIcon:hover {
+        cursor: pointer;
+        fill: $accentColor;
+        transition: fill 0.1s ease;
+    }
+}
+
+@media (hover: none) {
+    .header__calcIcon:hover {
+        fill: #ffffff;
+    }
+    .header__calcIcon:active {
+        fill: $accentColor;
+    }
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__burgerIcon {
+    fill: #ffffff;
+
+    &:hover {
+        fill: $accentColor;
+        transition: fill 0.1s ease;
+    }
+}
+
+.header__close {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.header__closeIcon {
+    fill: $textColor;
+
+    &:hover {
+        fill: $accentColor;
+        transition: fill 0.1s ease;
+    }
+}
+
+.header__overlay {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    background-color: hsla(0, 0%, 7%, 0.36);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media screen and (max-width: $tablet),
+    screen and (orientation: landscape) and (max-width: 959px) and (max-height: 590px) {
+    .header__overlay_active {
+        opacity: 1;
+        background-color: hsla(0, 0%, 7%, 0.36);
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        transition: opacity 0.8s ease, visibility 0s;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .header__close {
+        display: block;
+        position: absolute;
+        top: 65px;
+        right: 65px;
+    }
+
+    .header__closeIcon {
+        width: 17px;
+    }
+
+    .header__nav {
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 0.2s ease;
+        background-color: transparent;
+    }
+
+    .header__nav_active {
+        transform: translateX(0);
+    }
+
+    .header__navInner {
+        padding: 140px 60px;
+        width: 60vw;
+        height: 100vh;
+        background-color: $bgColor_dark;
+    }
+
+    .header__linksAndButtons {
+        flex-direction: column;
+    }
+
+    .header__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100vw;
+    }
+
+    .header__link,
+    .header__calc {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 45px;
+        font-family: $generalFont;
+    }
+
+    .header__calc {
+        height: 20px;
+    }
+
+    .header__buttons {
+        flex-direction: column-reverse;
+    }
+
+    .header__calc {
+        align-self: flex-start;
+        // margin: 40px 0;
+        margin-bottom: 45px;
+        margin-left: 0;
+        color: $textColor;
+    }
+
+    .header__burger {
+        display: block;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
+
+    .header__burgerIcon {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: $smallTablet) {
+    .header__navInner {
+        padding: 120px 40px;
+    }
+
+    .header__close {
+        top: 55px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .header {
+        height: 50px;
+    }
+
+    .header__logoIcon {
+        width: 35px;
+    }
+
+    .header__close {
+        top: 27px;
+        right: 23px;
+    }
+
+    .header__closeIcon {
+        width: 10px;
+    }
+
+    .header__navInner {
+        padding: 70px 30px;
+    }
+
+    .header__link,
+    .header__calc {
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 20px;
+    }
+
+    .header__calc {
+        height: 12px;
+        margin-bottom: 30px;
+    }
+
+    .header__buttons {
+        flex-direction: column-reverse;
+    }
+
+    .header__burgerIcon {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: $smallMobile) {
+    .header__navInner {
+        padding: 70px 18px;
+    }
+
+    .header__close {
+        top: 27px;
+        right: 15px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 959px) and (max-height: 590px) {
+    .header {
+        height: 50px;
+    }
+
+    .header__logoIcon {
+        width: 35px;
+    }
+
+    .header__close {
+        top: 27px;
+        right: 23px;
+    }
+
+    .header__closeIcon {
+        width: 10px;
+    }
+
+    .header__navInner {
+        padding: 70px 30px;
+        width: 40vw;
+    }
+
+    .header__link,
+    .header__calc {
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 20px;
+    }
+
+    .header__calc {
+        height: 12px;
+        margin-bottom: 30px;
+    }
+
+    .header__buttons {
+        flex-direction: column-reverse;
+    }
+
+    .header__burgerIcon {
+        width: 20px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 959px) and (max-height: 376px) {
+    .header__close {
+        top: 23px;
+        right: 23px;
+    }
+
+    .header__navInner {
+        padding: 40px 30px;
+        width: 40vw;
+    }
+}

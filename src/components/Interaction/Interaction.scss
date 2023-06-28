@@ -1,0 +1,217 @@
+@import "../../styles/_vars.scss";
+
+.interaction {
+    padding-top: 120px;
+    margin-bottom: 160px;
+}
+
+.interaction__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interaction__content {
+    display: flex;
+    width: 100%;
+    margin-bottom: 31px;
+}
+
+.interaction__left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.interaction__header {
+    max-width: 564px;
+    width: 100%;
+    align-self: flex-end;
+    margin-bottom: 25px;
+}
+
+.interaction__imgWrapper {
+    max-width: 100%;
+    height: auto;
+}
+
+.interaction__img {
+    width: 100%;
+}
+
+.interaction__buttons {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    max-width: 1140px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.interaction__buttonCalc {
+    margin-left: 10px;
+}
+
+.interaction__list {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-grow: 1;
+    // gap: 18px;
+    margin-top: 70px;
+}
+
+.interaction__item {
+    display: flex;
+    align-items: center;
+    // gap: 38px;
+    max-width: 600px;
+
+    &:not(:last-child) {
+        margin-bottom: 13px;
+    }
+}
+
+.interaction__numberWrapper {
+    display: flex;
+    min-width: 29px;
+    justify-content: center;
+}
+
+.interaction__number {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 65.37px;
+    color: $accentColor;
+
+    &_grey {
+        color: #d9d9d9;
+    }
+}
+
+.interaction__description {
+    margin-left: 38px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.24px;
+    color: $textColor_dark;
+}
+
+@media screen and (max-width: 1180px) {
+    .interaction {
+        margin-bottom: 100px;
+    }
+
+    .interaction__content {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .interaction__left {
+        width: 100%;
+    }
+
+    .interaction__item {
+        // max-width: 600px;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    }
+
+    .interaction__header {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .interaction__imgWrapper {
+        padding: 0 50px;
+    }
+
+    .interaction__list {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .interaction__buttons {
+        position: static;
+        flex-direction: column;
+        padding-left: 67px;
+    }
+
+    .interaction__buttonCalc {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .interaction {
+        padding-top: 110px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .interaction {
+        padding-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .interaction__mobile_hidden {
+        display: none;
+    }
+
+    .interaction__content {
+        margin-bottom: 20px;
+    }
+
+    .interaction__header {
+        margin-bottom: 20px;
+    }
+
+    .interaction__imgWrapper {
+        padding: 0;
+    }
+
+    .interaction__list {
+        margin-top: 20px;
+    }
+
+    .interaction__numberWrapper {
+        min-width: 14.91px;
+    }
+
+    .interaction__number {
+        font-size: 26px;
+        line-height: 35.41px;
+    }
+
+    .interaction__description {
+        margin-left: 12px;
+        font-size: 10px;
+        line-height: 13.62px;
+    }
+
+    .interaction__buttons {
+        flex-direction: row;
+        padding-left: 0;
+    }
+
+    .interaction__buttonCalc {
+        margin-top: 0;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 590px) {
+    .interaction {
+        padding-top: 40px;
+    }
+
+    .interaction__header {
+        margin-bottom: 20px;
+    }
+}

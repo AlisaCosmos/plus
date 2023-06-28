@@ -1,0 +1,81 @@
+@import "../../styles/_vars.scss";
+
+.documents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.documents__header {
+    margin-bottom: 37px;
+}
+
+.documents__list {
+    display: flex;
+    flex-direction: column;
+    height: 485px;
+    padding: 30px 15px;
+    background-color: #f3f3f3;
+}
+
+.documents__link {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.24px;
+    color: $textColor_dark;
+    border-bottom: 3px solid #ffffff;
+
+    &:not(:first-child) {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .documents__header {
+        margin-bottom: 10px;
+    }
+
+    .documents__list {
+        height: 100%;
+        padding: 21px 24px;
+    }
+
+    .documents__link:last-child {
+        border-bottom: none;
+    }
+
+    .documents__link:not(:last-child) {
+        padding-bottom: 12px;
+    }
+
+    .documents__link:not(:first-child) {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .documents__header {
+        margin-bottom: 19px;
+    }
+
+    .documents__list {
+        padding: 10px 20px;
+    }
+
+    .documents__link {
+        font-size: 12px;
+        line-height: 16.34px;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 0;
+
+        &:not(:first-child) {
+            padding-top: 10px;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 10px;
+        }
+    }
+}

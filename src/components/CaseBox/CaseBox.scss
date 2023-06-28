@@ -1,0 +1,185 @@
+@import "../../styles/_vars.scss";
+
+.caseBox {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto;
+    border-top: 1px solid #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .caseBox__scheme {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        height: 190px;
+        .caseBox__schemeImg {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .caseBox__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 10px;
+        .caseBox__textTitle {
+            width: fit-content;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 33px;
+        }
+        .caseBox__textSubtitle {
+            color: $textColor_dark;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 19px;
+        }
+        .caseBox__link {
+            margin-top: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: fit-content;
+
+            color: $textColor_dark;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 19px;
+            .caseBox__link_arrowIcon {
+                fill: $textColor_dark;
+                margin-top: 7px;
+                margin-left: 3px;
+            }
+        }
+    }
+}
+
+#itoutsourcing {
+    border-bottom: 1px solid #000000;
+}
+
+.caseBox .caseBox__text .caseBox__textTitle {
+    color: $textColor_dark;
+    &:focus-visible {
+        color: $accentColor;
+    }
+}
+
+.caseBox .caseBox__text .caseBox__link:focus-visible {
+    color: $accentColor;
+    .caseBox__link_arrowIcon {
+        fill: $accentColor;
+    }
+}
+
+@media (hover: hover) {
+    .caseBox .caseBox__text .caseBox__textTitle:hover {
+        cursor: pointer;
+        color: $accentColor;
+        transition: color 0.1s ease;
+    }
+
+    .caseBox .caseBox__text .caseBox__link:hover {
+        cursor: pointer;
+        color: $accentColor;
+        transition: color 0.1s ease;
+        .caseBox__link_arrowIcon {
+            fill: $accentColor;
+            transition: fill 0.1s ease;
+        }
+    }
+}
+
+@media (hover: none) {
+    .caseBox .caseBox__text .caseBox__textTitle:hover {
+        color: $textColor_dark;
+    }
+    .caseBox .caseBox__text .caseBox__textTitle:active {
+        color: $accentColor;
+    }
+
+    .caseBox .caseBox__text .caseBox__link:hover {
+        color: $textColor_dark;
+        .caseBox__link_arrowIcon {
+            fill: $textColor_dark;
+        }
+    }
+    .caseBox .caseBox__text .caseBox__link:active {
+        color: $accentColor;
+        .caseBox__link_arrowIcon {
+            fill: $accentColor;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .caseBox {
+        grid-template-columns: 140px 1fr;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .caseBox__scheme {
+            height: 123px;
+        }
+        .caseBox__text {
+            margin-left: 20px;
+            .caseBox__textTitle {
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 33px;
+                margin-bottom: 5px;
+            }
+            .caseBox__textSubtitle {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 19px;
+            }
+            .caseBox__link {
+                padding-top: 15px;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 19px;
+                .caseBox__link_arrowIcon {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .caseBox {
+        grid-template-columns: 89px 1fr;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        .caseBox__scheme {
+            height: 82px;
+        }
+        .caseBox__text {
+            margin-left: 15px;
+            .caseBox__textTitle {
+                font-size: 12px;
+                font-weight: 800;
+                line-height: 16px;
+                margin-bottom: 0px;
+            }
+            .caseBox__textSubtitle {
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 14px;
+            }
+            .caseBox__link {
+                padding-top: 10px;
+                align-self: flex-end;
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 14px;
+                .caseBox__link_arrowIcon {
+                    margin-top: 4px;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}

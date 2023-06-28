@@ -1,0 +1,209 @@
+@import "../../styles/_vars.scss";
+
+.buttonRequestCalculator_modal {
+    width: 320px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    padding: 14px 0;
+    overflow: hidden;
+}
+
+.buttonRequestCalculator__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    background-color: transparent;
+    transition: transform 300ms ease;
+}
+
+.buttonRequestCalculator__innerActive {
+    transform: translateX(100%);
+}
+
+.buttonRequestCalculator__arrowWrapper {
+    display: flex;
+    align-items: center;
+    width: 0;
+    height: 12px;
+    overflow: hidden;
+    margin-left: 8px;
+    transition: width 0.1s ease-in-out;
+}
+.buttonRequestCalculator__arrow {
+    width: 20px;
+}
+.buttonRequestCalculator_modal:hover .buttonRequestCalculator__arrowWrapper,
+.buttonRequestCalculator_modal__focus .buttonRequestCalculator__arrowWrapper {
+    width: 20px;
+    margin-left: 8px;
+}
+
+// for market page
+.buttonRequestCalculator_market {
+    width: 440px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: center;
+    padding: 20.5px 0;
+    overflow: hidden;
+
+    .buttonRequestCalculator__arrowWrapper {
+        height: 8px;
+        margin-left: 10px;
+    }
+    .buttonRequestCalculator__arrow {
+        width: 15px;
+    }
+}
+.buttonRequestCalculator_market:hover .buttonRequestCalculator__arrowWrapper,
+.buttonRequestCalculator_market__focus .buttonRequestCalculator__arrowWrapper {
+    width: 15px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: $tablet) {
+    .buttonRequestCalculator_modal {
+        width: 260px;
+        height: 45px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+        padding: 13px 0;
+
+        .buttonRequestCalculator__arrowWrapper {
+            width: 0;
+            height: 8px;
+            overflow: hidden;
+            margin-left: 0;
+        }
+        .buttonRequestCalculator__arrow {
+            width: 12px;
+        }
+    }
+    .buttonRequestCalculator_modal:hover .buttonRequestCalculator__arrowWrapper,
+    .buttonRequestCalculator_modal__focus .buttonRequestCalculator__arrowWrapper {
+        width: 0;
+        overflow: hidden;
+        margin-left: 0;
+    }
+    .buttonRequestCalculator_modal .buttonRequestCalculator__innerActive .buttonRequestCalculator__arrowWrapper {
+        width: 12px;
+        margin-left: 5px;
+        overflow: visible;
+    }
+}
+
+@media screen and (max-width: $smallTablet) {
+    .buttonRequestCalculator_modal {
+        width: 220px;
+        height: 40px;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        padding: 13px 0;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .buttonRequestCalculator_modal {
+        width: 190px;
+        height: 40px;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        padding: 13px 0;
+    }
+}
+
+// for market page
+@media screen and (max-width: 1180px), screen and (orientation: landscape) and (max-height: 500px) {
+    .buttonRequestCalculator_market {
+        width: 300px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+        padding: 14px 0;
+        overflow: hidden;
+
+        .buttonRequestCalculator__arrowWrapper {
+            width: 0;
+            height: 12px;
+            overflow: hidden;
+            margin-left: 10px;
+        }
+        .buttonRequestCalculator__arrow {
+            width: 20px;
+        }
+    }
+
+    .buttonRequestCalculator_market:hover .buttonRequestCalculator__arrowWrapper,
+    .buttonRequestCalculator_market__focus .buttonRequestCalculator__arrowWrapper {
+        width: 20px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .buttonRequestCalculator_market {
+        .buttonRequestCalculator__arrowWrapper {
+            width: 0;
+            height: 12px;
+            overflow: hidden;
+            margin-left: 0;
+        }
+        .buttonRequestCalculator__arrow {
+            width: 20px;
+        }
+    }
+    .buttonRequestCalculator_market:hover .buttonRequestCalculator__arrowWrapper,
+    .buttonRequestCalculator_market__focus .buttonRequestCalculator__arrowWrapper {
+        width: 0;
+        overflow: hidden;
+        margin-left: 0;
+    }
+    .buttonRequestCalculator_market .buttonRequestCalculator__innerActive .buttonRequestCalculator__arrowWrapper {
+        width: 20px;
+        overflow: visible;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buttonRequestCalculator_market {
+        width: 220px;
+        height: 40px;
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 14px;
+        padding: 13px 0;
+        overflow: hidden;
+
+        .buttonRequestCalculator__arrowWrapper {
+            width: 0;
+            height: 8px;
+            overflow: hidden;
+            margin-left: 0;
+        }
+        .buttonRequestCalculator__arrow {
+            width: 12px;
+        }
+    }
+    .buttonRequestCalculator_market:hover .buttonRequestCalculator__arrowWrapper,
+    .buttonRequestCalculator_market__focus .buttonRequestCalculator__arrowWrapper {
+        width: 0;
+        overflow: hidden;
+        margin-left: 0;
+    }
+    .buttonRequestCalculator_market .buttonRequestCalculator__innerActive .buttonRequestCalculator__arrowWrapper {
+        width: 12px;
+        overflow: visible;
+        margin-left: 8px;
+    }
+}

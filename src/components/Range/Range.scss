@@ -1,0 +1,346 @@
+@import "../../styles/_vars.scss";
+
+.range {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.range_modal {
+  margin-top: calc(10px - 5.6px);
+  margin-bottom: 24px;
+
+  & .range__input {
+    width: 258px;
+    height: 5px;
+    border-radius: 3px;
+  }
+}
+
+.range__inputWrapper {
+  position: relative;
+}
+
+.range__input {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e6e6e6;
+  background-image: linear-gradient(#ff7a00, #ff7a00);
+  background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+.range__input::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: $accentColor;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+.range__input::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: $accentColor;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+.range__input::-ms-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: $accentColor;
+  cursor: ew-resize;
+  transition: background 0.3s ease-in-out;
+}
+
+.range__input::-webkit-slider-thumb:hover {
+  background: $accentColor;
+}
+
+.range__input::-moz-range-thumb:hover {
+  background: $accentColor;
+}
+
+.range__input::-ms-thumb:hover {
+  background: $accentColor;
+}
+
+/* Input Track */
+.range__input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.range__input::-moz-range-track {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.range__input::-ms-track {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/* Цифры */
+.range_modal {
+  .range__numberWrapper {
+    margin-left: 10px;
+  }
+  .range__number {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    white-space: nowrap;
+    color: $textColor_dark;
+  }
+}
+
+// for market page
+.range_market {
+  margin-top: 7px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 220px;
+
+  & .range__input {
+    width: 330px;
+    height: 7px;
+    border-radius: 3px;
+  }
+
+  .range__numberWrapper {
+    margin-left: 25px;
+  }
+  .range__number {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .range__input::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $accentColor;
+    cursor: ew-resize;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .range__input::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $accentColor;
+    cursor: ew-resize;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .range__input::-ms-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: $accentColor;
+    cursor: ew-resize;
+    transition: background 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .range_modal {
+    margin-top: 0px;
+    margin-bottom: 22px;
+
+    & .range__input {
+      width: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .range_modal {
+    margin-top: calc(9px - 8px);
+    margin-bottom: 22px;
+
+    & .range__input {
+      width: 200px;
+    }
+    .range__numberWrapper {
+      margin-left: 5px;
+    }
+    .range__number {
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 14px;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .range_modal {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    & .range__input {
+      width: 170px;
+    }
+    .range__numberWrapper {
+      margin-left: 10px;
+    }
+    .range__number {
+      font-size: 8px;
+      font-weight: 600;
+      line-height: 11px;
+    }
+  }
+}
+
+// for market page
+@media screen and (max-width: 1180px), screen and (orientation: landscape) and (max-height: 500px) {
+  .range_market {
+    margin-top: calc(10px - 5.6px);
+    margin-bottom: 25px;
+    grid-template-columns: 1fr 119px;
+
+    & .range__input {
+      width: 258px;
+      height: 5px;
+      border-radius: 3px;
+    }
+    .range__numberWrapper {
+      margin-left: 10px;
+    }
+    .range__number {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    .range__input::-webkit-slider-thumb {
+      position: relative;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: $accentColor;
+      cursor: ew-resize;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .range__input::-moz-range-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: $accentColor;
+      cursor: ew-resize;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .range__input::-ms-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: $accentColor;
+      cursor: ew-resize;
+      transition: background 0.3s ease-in-out;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .range_market {
+    margin-top: calc(10px - 6.6px);
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 80px;
+
+    & .range__input {
+      width: 200px;
+      height: 5px;
+      border-radius: 3px;
+    }
+    .range__numberWrapper {
+      margin-left: 5px;
+    }
+    .range__number {
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 14px;
+    }
+
+    .range__input::-webkit-slider-thumb {
+      position: relative;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: $accentColor;
+      cursor: ew-resize;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .range__input::-moz-range-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: $accentColor;
+      cursor: ew-resize;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .range__input::-ms-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: $accentColor;
+      cursor: ew-resize;
+      transition: background 0.3s ease-in-out;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .range_market {
+    grid-template-columns: 1fr 70px;
+
+    & .range__input {
+      width: 160px;
+    }
+  }
+}

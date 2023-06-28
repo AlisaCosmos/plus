@@ -1,0 +1,33 @@
+@import "../../styles/_vars.scss";
+
+.buttonCalculate {
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    transition: transform 200ms ease;
+}
+
+.buttonCalculate__inactive {
+    background-image: url(../../assets/imgs/corner_left_top_bold3.svg),
+        url(../../assets/imgs/corner_right_bottom_bold3.svg);
+}
+
+.buttonCalculate__active {
+    background-image: url(../../assets/imgs/corner_left_bottom_bold3.svg),
+        url(../../assets/imgs/corner_right_top_bold3.svg);
+}
+
+@media screen and (min-width: $tablet) {
+    .buttonCalculate:hover,
+    .buttonCalculate__focus {
+        background-image: url(../../assets/imgs/corner_left_bottom_bold3.svg),
+            url(../../assets/imgs/corner_right_top_bold3.svg);
+    }
+}
+
+/* @media screen and (max-width: $mobile) {
+    .buttonCalculate__inactive,
+    .buttonCalculate__active {
+        background-size: 50px 100%, 50px 100%;
+    }
+} */

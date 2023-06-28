@@ -1,0 +1,71 @@
+@import "../../styles/_vars.scss";
+
+.takeAsMuch__inner {
+    margin-bottom: 190px;
+
+    .takeAsMuch__header {
+        color: $accentColor;
+        margin-right: 20%;
+        margin-bottom: 80px;
+    }
+
+    .takeAsMuch__items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    // up to 959px
+    .takeAsMuch__inner {
+        margin-bottom: 80px;
+        .takeAsMuch__header {
+            margin-bottom: 80px;
+            margin-right: 5%;
+        }
+        .takeAsMuch__items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 0px;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    .takeAsMuch__inner {
+        margin-bottom: 80px !important;
+        .takeAsMuch__header {
+            margin-bottom: 80px !important;
+            margin-right: 5% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .takeAsMuch__inner {
+        margin-bottom: 40px;
+        .takeAsMuch__header {
+            margin-bottom: 30px;
+            margin-right: 18%;
+        }
+        .takeAsMuch__items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: $smallMobile) {
+    // up to 330px
+    .takeAsMuch__inner {
+        .takeAsMuch__header {
+            margin-right: 0px;
+        }
+        .takeAsMuch__items {
+            margin-right: 0px;
+        }
+    }
+}

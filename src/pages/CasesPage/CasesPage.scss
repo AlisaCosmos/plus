@@ -1,0 +1,37 @@
+@import "../../styles/_vars.scss";
+
+.casesPage {
+    margin-top: 90px;
+    margin-bottom: 56px;
+    .casesPage__inner {
+        display: flex;
+        flex-direction: column;
+        .casesPage__header {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .casesPage {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        .casesPage__inner {
+            .casesPage__header {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .casesPage {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        .casesPage__inner {
+            .casesPage__header {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

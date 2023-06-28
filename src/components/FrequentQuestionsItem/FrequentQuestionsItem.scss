@@ -1,0 +1,182 @@
+@import "../../styles/_vars.scss";
+
+.frequentQuestionsItem {
+    background: #f3f3f3;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 27px;
+
+    .frequentQuestionsItem__question {
+        height: 76px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .frequentQuestionsItem__question__title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 27px;
+        }
+        .frequentQuestionsItem__question__btn {
+            width: 28px;
+            height: 21px;
+            display: grid;
+            align-self: center;
+            margin-left: 10px;
+            svg {
+                width: 28px;
+                height: 21px;
+            }
+        }
+    }
+    .frequentQuestionsItem__answer {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        padding-bottom: 20px;
+        padding-right: calc(28px + 10px);
+
+        ol,
+        ul {
+            list-style-position: inside;
+        }
+        ul {
+            li {
+                list-style: none;
+            }
+            li:before {
+                content: "·";
+                font-size: 40px;
+                vertical-align: bottom;
+                padding: 0px 10px;
+            }
+        }
+    }
+}
+
+#accounting > div > div > div:first-child {
+    margin-bottom: 10px;
+}
+
+.frequentQuestionsItem:last-of-type {
+    margin-bottom: 0px;
+}
+
+.frequentQuestionsItem__question__polygonRotation {
+    transform: rotate(180deg);
+}
+
+.frequentQuestionsItem__question,
+.frequentQuestionsItem__question__btn {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.frequentQuestionsItem__answerTransition {
+    opacity: 0;
+}
+.frequentQuestionsItem__answerTransition.in.visible {
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+@media screen and (max-width: $tablet) {
+    // up to 959px
+    .frequentQuestionsItem {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 20px;
+        .frequentQuestionsItem__question {
+            height: 100%;
+            padding-top: 18.5px;
+            padding-bottom: 18.5px;
+            .frequentQuestionsItem__question__title {
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 23px;
+            }
+            .frequentQuestionsItem__question__btn {
+                width: 24px;
+                height: 18px;
+                margin-left: 10px;
+                svg {
+                    width: 24px;
+                    height: 18px;
+                }
+            }
+        }
+        .frequentQuestionsItem__answer {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            padding-bottom: 18.5px;
+            padding-right: calc(24px + 10px);
+
+            ul {
+                li {
+                    list-style: none;
+                }
+                li:before {
+                    content: "·";
+                    font-size: 30px;
+                    vertical-align: bottom;
+                    padding: 0px 8px;
+                }
+            }
+        }
+    }
+    #accounting > div > div > div:first-child {
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    // up to 480px
+    .frequentQuestionsItem {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 10px;
+        .frequentQuestionsItem__question {
+            height: 100%;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            .frequentQuestionsItem__question__title {
+                font-size: 10px;
+                font-weight: 600;
+                line-height: 14px;
+            }
+            .frequentQuestionsItem__question__btn {
+                width: 16px;
+                height: 12px;
+                margin-left: 10px;
+                svg {
+                    width: 16px;
+                    height: 12px;
+                }
+            }
+        }
+        .frequentQuestionsItem__answer {
+            font-size: 9px;
+            font-weight: 400;
+            line-height: 12px;
+            padding-bottom: 13px;
+            padding-right: calc(20px + 10px);
+
+            ul {
+                li {
+                    list-style: none;
+                }
+                li:before {
+                    content: "·";
+                    font-size: 20px;
+                    vertical-align: bottom;
+                    padding: 0px 5px;
+                }
+            }
+        }
+    }
+    #accounting > div > div > div:first-child {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,58 @@
+export const helpFields = [
+    {
+        id: 'helpSurname',
+        label: 'Фамилия*',
+        name: 'surname',
+        view: 'input',
+        type:'text',
+        rule: 'name',
+    },
+        {
+        id: 'helpName',
+        label: 'Имя*',
+        name: 'name',
+        view: 'input',
+        type:'text',
+        rule: 'name',
+    },
+    {
+        id: 'helpMiddle',
+        label: 'Отчество',
+        name: 'middle',
+        view: 'input',
+        type:'text',
+        rule: 'middle',
+    },
+    {
+        id: 'helpInn',
+        label: 'ИНН*',
+        name: 'inn',
+        view: 'input',
+        type:'text',
+        rule: 'inn',
+    },
+    {
+        id: 'helpPhone',
+        label: 'Номер телефона*',
+        name: 'tel',
+        view: 'phone',
+        type:'tel',
+        rule: 'phone',
+    },
+    {
+        id: 'helpEmail',
+        label: 'E-mail*',
+        name: 'email',
+        view: 'input',
+        type:'text',
+        rule: 'email',
+    },
+    {
+        id: 'helpQuestion',
+        label: 'Ваш вопрос*',
+        name: 'question',
+        view: 'texterea',
+        type:'text',
+        rule: 'question',
+    }
+]

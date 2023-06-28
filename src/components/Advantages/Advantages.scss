@@ -1,0 +1,175 @@
+@import "../../styles/_vars.scss";
+
+.advantages__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.advantages__header {
+    margin-bottom: 82px;
+    text-align: center;
+}
+
+.advantages__options {
+    width: 100%;
+    height: calc(565px - 82px);
+    color: $textColor_dark;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advantages__options_box {
+    width: 275px;
+    height: 214px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-self: center;
+}
+
+.advantages__options_boxImgWrapper {
+    width: 100px;
+    height: 100px;
+    background: #efefef;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages__options_boxImg {
+    width: 44px;
+    height: 44px;
+}
+
+.advantages__options_boxDescription {
+    width: 200px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+}
+
+#calendar {
+    grid-area: calendar;
+}
+#chart {
+    grid-area: chart;
+}
+#comment {
+    grid-area: comment;
+}
+#usdCircle {
+    grid-area: usdCircle;
+}
+#mapMarker {
+    grid-area: mapMarker;
+}
+#shop {
+    grid-area: shop;
+}
+#moneyCheck {
+    grid-area: moneyCheck;
+}
+#stats {
+    grid-area: stats;
+}
+
+@media screen and (max-width: 1180px) {
+    .advantages__options_box {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .advantages__options_box {
+        width: 219px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .advantages__header {
+        margin-bottom: 90px;
+    }
+    .advantages__options {
+        height: calc(850px - 90px);
+        display: grid;
+        grid-template-areas:
+            "mapMarker calendar calendar chart"
+            "usdCircle usdCircle stats stats"
+            "comment moneyCheck moneyCheck shop";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 224px 224px auto;
+        align-items: start;
+    }
+    .advantages__options_box {
+        width: 200px;
+        height: 224px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .advantages__header {
+        margin-bottom: 50px;
+    }
+    .advantages__options {
+        height: calc(980px - 50px);
+        display: grid;
+        grid-template-areas:
+            "mapMarker calendar"
+            "chart usdCircle"
+            "stats comment"
+            "moneyCheck shop";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 224px 224px 224px auto;
+        align-items: start;
+    }
+    .advantages__options_box {
+        width: 200px;
+        height: 224px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .advantages__header {
+        margin-bottom: 20px;
+    }
+    .advantages__options {
+        height: calc(600px - 20px);
+        display: grid;
+        grid-template-areas:
+            "mapMarker calendar"
+            "chart usdCircle"
+            "stats comment"
+            "moneyCheck shop";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 140px 140px 140px auto;
+        align-items: start;
+    }
+    .advantages__options_box {
+        width: 110px;
+        height: 140px;
+    }
+    .advantages__options_boxImgWrapper {
+        width: 70px;
+        height: 70px;
+    }
+    .advantages__options_boxImg {
+        width: 30px;
+        height: 30px;
+    }
+    .advantages__options_boxDescription {
+        width: 110px;
+        margin-top: 10px;
+        font-size: 9px;
+        font-weight: 600;
+        line-height: 11px;
+        text-align: center;
+    }
+}

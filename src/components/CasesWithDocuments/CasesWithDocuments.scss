@@ -1,0 +1,33 @@
+@import "../../styles/_vars.scss";
+
+.homePage__casesAndDocuments {
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.homePage__cases {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 1130px) {
+    .homePage__casesAndDocuments {
+        flex-direction: column;
+    }
+
+    .homePage__cases {
+        margin-right: 0;
+        margin-bottom: 46px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .homePage__casesAndDocuments {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 590px) {
+    .homePage__casesAndDocuments {
+        margin-bottom: 40px;
+    }
+}

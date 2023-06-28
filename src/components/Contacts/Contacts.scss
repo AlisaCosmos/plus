@@ -1,0 +1,215 @@
+@import "../../styles/_vars.scss";
+
+.contacts {
+    margin-bottom: 40px;
+}
+
+.contacts__header {
+    margin-bottom: 30px;
+}
+
+.contacts__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contacts__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+    max-width: 350px;
+}
+
+.contacts__row:first-child {
+    margin-bottom: 29px;
+}
+
+.contacts__row:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__subtitle {
+    font-size: 24px;
+    line-height: 32.68px;
+    font-weight: 700;
+    color: $textColor_dark;
+    margin-bottom: 15px;
+}
+
+.contacts__description {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.24px;
+    color: $textColor_dark;
+}
+
+.contacts__telAndMail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts__linkAndIcon {
+    display: flex;
+    align-items: center;
+}
+
+.contacts__icon {
+    margin-right: 21px;
+}
+
+.contacts__iconTel {
+    width: 19px;
+}
+
+.contacts__iconMail {
+    width: 20px;
+}
+
+.contacts__mapWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    min-width: 575px;
+    max-width: 720px;
+    height: 100%;
+    min-height: 600px;
+}
+
+.contacts__map {
+    width: 100%;
+    border: 0;
+}
+
+@media screen and (max-width: 1160px) {
+    .contacts__desktop_hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .contacts__desktop_hidden {
+        display: block;
+    }
+
+    .contacts {
+        margin-bottom: 89px;
+    }
+
+    .contacts__contacts {
+        margin-right: 20px;
+        min-width: 246px;
+    }
+
+    .contacts__subtitle {
+        margin-bottom: 10px;
+    }
+
+    .contacts__mapWrapper {
+        min-width: 50%;
+        max-width: 450px;
+        min-height: 720px;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .contacts__desktop_hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contacts__icon {
+        margin-right: 15px;
+    }
+
+    .contacts__contacts {
+        margin-right: 10px;
+        min-width: 214px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .contacts__desktop_hidden {
+        display: block;
+    }
+
+    .contacts {
+        margin-bottom: 20px;
+    }
+
+    .contacts__content {
+        flex-direction: column;
+    }
+
+    .contacts__header {
+        margin-bottom: 18px;
+    }
+
+    .contacts__contacts {
+        margin-bottom: 17px;
+        margin-right: 0px;
+        max-width: 100%;
+    }
+
+    .contacts__row:first-child {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .contacts__subtitle {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 7px;
+    }
+
+    .contacts__description {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .contacts__telAndMail {
+        gap: 8px;
+    }
+
+    .contacts__icon {
+        margin-right: 8px;
+    }
+
+    .contacts__iconTel {
+        width: 11px;
+    }
+
+    .contacts__iconMail {
+        width: 12px;
+    }
+
+    .contacts__mapWrapper {
+        width: 100%;
+        max-width: 100%;
+        min-height: 220px;
+    }
+}
+
+@media screen and (max-width: $smallMobile) {
+    .contacts__contacts {
+        gap: 10px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 959px) and (max-height: 590px) {
+    .contacts__desktop_hidden {
+        display: none;
+    }
+    .contacts {
+        margin-bottom: 20px;
+    }
+    .contacts__mapWrapper {
+        width: 70%;
+        max-width: 100%;
+        height: 70vh;
+        min-height: 300px;
+    }
+}

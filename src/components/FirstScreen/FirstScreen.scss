@@ -1,0 +1,225 @@
+@import "../../styles/_vars.scss";
+
+.firstScreen {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $bgColor_dark;
+  height: 100%;
+  max-height: 810px;
+}
+
+.firstScreen_home {
+  background-image: image-set("../../assets/imgs/first_screen.jpg" 1x, "../../assets/imgs/first_screen_2x.jpg" 2x);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+
+  & .firstScreen__inner {
+    margin-top: 231px;
+  }
+
+  & .firstScreen__description {
+    max-width: 776px;
+  }
+
+  & .firstScreen__buttons {
+    margin-bottom: 182px;
+  }
+}
+
+.firstScreen_market {
+  background-image: image-set(
+    "../../assets/imgs/first_screen_market.jpg" 1x,
+    "../../assets/imgs/first_screen_market_2x.jpg" 2x
+  );
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+  }
+
+  & .firstScreen__inner {
+    margin-top: 174px;
+  }
+
+  & .firstScreen__description {
+    max-width: 889px;
+  }
+
+  & .firstScreen__buttons {
+    margin-bottom: 212px;
+  }
+}
+
+.firstScreen__inner {
+  z-index: 100;
+}
+
+.firstScreen__header {
+  margin-bottom: 5px;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 81.71px;
+  color: $textColor;
+  text-transform: uppercase;
+}
+
+.firstScreen__description {
+  margin-bottom: 14px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 43.58px;
+  color: $textColor;
+}
+
+.firstScreen__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstScreen__buttonCalc {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: $tablet) {
+  .firstScreen_home {
+    background-image: image-set(
+      "../../assets/imgs/first_screen_tablet.jpg" 1x,
+      "../../assets/imgs/first_screen_tablet_2x.jpg" 2x
+    );
+    max-height: 1094px;
+
+    & .firstScreen__inner {
+      margin-top: 316px;
+    }
+
+    & .firstScreen__header {
+      max-width: 700px;
+    }
+
+    & .firstScreen__description {
+      max-width: 568px;
+    }
+
+    & .firstScreen__buttons {
+      margin-bottom: 345px;
+    }
+  }
+
+  .firstScreen_market {
+    max-height: 1030px;
+    background-image: image-set(
+      "../../assets/imgs/first_screen_market_tablet.jpg" 1x,
+      "../../assets/imgs/first_screen_market_tablet_2x.jpg" 2x
+    );
+
+    & .firstScreen__inner {
+      margin-top: 200px;
+    }
+
+    & .firstScreen__header {
+      max-width: 540px;
+    }
+
+    & .firstScreen__description {
+      max-width: 680px;
+    }
+
+    & .firstScreen__buttons {
+      margin-bottom: 464px;
+    }
+  }
+
+  .firstScreen__header {
+    margin-bottom: 10px;
+    font-size: 48px;
+    line-height: 65.37px;
+  }
+
+  .firstScreen__description {
+    font-size: 24px;
+    line-height: 32.68px;
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .firstScreen_home {
+    max-height: 518px;
+
+    & .firstScreen__inner {
+      margin-top: 123px;
+    }
+
+    & .firstScreen__header {
+      max-width: 250px;
+    }
+
+    & .firstScreen__description {
+      max-width: 240px;
+    }
+  }
+
+  .firstScreen_market {
+    max-height: 518px;
+
+    & .firstScreen__inner {
+      margin-top: 173px;
+    }
+
+    & .firstScreen__header {
+      max-width: 250px;
+    }
+
+    & .firstScreen__description {
+      max-width: 240px;
+    }
+  }
+
+  .firstScreen__header {
+    font-size: 20px;
+    line-height: 27.24px;
+  }
+
+  .firstScreen__description {
+    font-size: 12px;
+    line-height: 16.34px;
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 590px) {
+  .firstScreen_home {
+    & .firstScreen__inner {
+      margin-top: 60px;
+    }
+
+    & .firstScreen__buttons {
+      margin-bottom: 80px;
+    }
+  }
+
+  .firstScreen_market {
+    & .firstScreen__inner {
+      margin-top: 60px;
+    }
+
+    & .firstScreen__buttons {
+      margin-bottom: 90px;
+    }
+  }
+}

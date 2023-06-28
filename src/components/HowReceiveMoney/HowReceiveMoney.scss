@@ -1,0 +1,47 @@
+@import "../../styles/_vars.scss";
+
+.howReceiveMoney {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.howReceiveMoney__header {
+    margin-bottom: 100px;
+}
+
+.howReceiveMoney__steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.howReceiveMoney__twoSteps {
+    display: flex;
+}
+
+@media screen and (max-width: 1150px) {
+    .howReceiveMoney {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+
+    .howReceiveMoney__header {
+        margin-bottom: 75px;
+    }
+
+    .howReceiveMoney__twoSteps {
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .howReceiveMoney {
+        margin-top: 35px;
+        margin-bottom: 50px;
+    }
+
+    .howReceiveMoney__header {
+        margin-bottom: 52px;
+    }
+}

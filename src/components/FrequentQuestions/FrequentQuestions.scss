@@ -1,0 +1,45 @@
+@import "../../styles/_vars.scss";
+
+.frequentQuestions__inner {
+    margin-bottom: 100px;
+    .frequentQuestions__header {
+        margin-bottom: 30px;
+    }
+    .frequentQuestions__items {
+        display: flex;
+        flex-direction: column;
+        color: $textColor_dark;
+    }
+}
+
+@media screen and (max-width: 1130px) {
+    .frequentQuestions__inner {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    // up to 959px
+    .frequentQuestions__inner {
+        margin-bottom: 100px;
+        .frequentQuestions__header {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    // up to 480px
+    .frequentQuestions__inner {
+        margin-bottom: 50px;
+        .frequentQuestions__header {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 590px) {
+    .frequentQuestions__inner {
+        margin-bottom: 40px;
+    }
+}

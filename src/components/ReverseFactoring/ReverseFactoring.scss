@@ -1,0 +1,178 @@
+@import "../../styles/_vars.scss";
+
+.reverseFactoring__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.reverseFactoring__header {
+    margin-bottom: 94px;
+    text-align: center;
+}
+
+.reverseFactoring__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.reverseFactoring__oneCard {
+    width: 230px;
+    height: 280px;
+    padding-top: 50px;
+    background: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reverseFactoring__oneCard_imgWrapper {
+    width: 70px;
+    height: 70px;
+}
+.reverseFactoring__oneCard_img {
+    width: 70px;
+    height: auto;
+}
+
+.reverseFactoring__oneCard_accent {
+    position: relative;
+    top: -20px;
+    left: 0px;
+    background: $accentColor;
+    .reverseFactoring__oneCard_description {
+        color: $textColor;
+    }
+}
+
+.reverseFactoring__oneCard_description {
+    margin-top: 40px;
+    padding: 0px 5px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-align: center;
+    color: $textColor_dark;
+}
+
+.reverseFactoring__oneCard:last-child > .reverseFactoring__oneCard_description {
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 1050px) {
+    .reverseFactoring__oneCard {
+        width: 210px;
+        padding-top: 40px;
+    }
+    .reverseFactoring__oneCard_description {
+        margin-top: 30px;
+        padding: 0px 10px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .reverseFactoring__inner {
+        margin-top: 100px;
+    }
+    .reverseFactoring__header {
+        margin-bottom: 65px;
+    }
+    .reverseFactoring__cards {
+        width: 100%;
+        height: calc(230px + 42px + 230px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+    .reverseFactoring__oneCard {
+        width: 340px;
+        height: 230px;
+        padding-top: 30px;
+    }
+    .reverseFactoring__oneCard_accent {
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    .reverseFactoring__oneCard_description {
+        margin-top: 20px;
+        padding: 0px 15px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    .reverseFactoring__oneCard:last-child > .reverseFactoring__oneCard_description {
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .reverseFactoring__cards {
+        width: 100%;
+        height: calc(4 * 230px + 4 * 42px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .reverseFactoring__inner {
+        margin-top: 45px;
+    }
+    .reverseFactoring__header {
+        margin-bottom: 30px;
+    }
+    .reverseFactoring__cards {
+        width: 100%;
+        height: calc(4 * 100px + 4 * 10px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .reverseFactoring__oneCard {
+        width: 100%;
+        height: 100px;
+        padding: 0px 10px 0px 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .reverseFactoring__oneCard_imgWrapper {
+        width: 45px;
+        height: 45px;
+    }
+    .reverseFactoring__oneCard_img {
+        width: 45px;
+        height: auto;
+    }
+    .reverseFactoring__oneCard_accent {
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    .reverseFactoring__oneCard_description {
+        margin-top: 0px;
+        padding: 0px 0px 0px 19px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 14px;
+        text-align: left;
+    }
+    .reverseFactoring__oneCard:last-child > .reverseFactoring__oneCard_description {
+        padding: 0px 0px 0px 19px;
+    }
+}

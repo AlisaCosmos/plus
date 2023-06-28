@@ -1,0 +1,72 @@
+@import "../../styles/_vars.scss";
+
+.bannerFactoring__inner {
+    margin-bottom: 30px;
+    .bannerFactoring__box {
+        height: 300px;
+        padding: 40px 42px;
+        background-image: linear-gradient(90deg, #000000 -43.25%, rgba(0, 0, 0, 0) 96.35%),
+            image-set("../../assets/imgs/banner_factoring.jpg" 1x, "../../assets/imgs/banner_factoring_2x.jpg" 2x);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .bannerFactoring__box__header,
+        .bannerFactoring__box__header div {
+            color: $textColor;
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 49px;
+        }
+        .bannerFactoring__box__header {
+            margin-bottom: 62px;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    // up to 959px
+    .bannerFactoring__inner {
+        margin-bottom: 20px;
+        .bannerFactoring__box {
+            height: auto;
+            max-height: 240px;
+            padding-top: 28px;
+            padding-bottom: 28px;
+            padding-left: 24px;
+            padding-right: 0px;
+            .bannerFactoring__box__header,
+            .bannerFactoring__box__header div {
+                font-size: 28px;
+                font-weight: 800;
+                line-height: 38px;
+            }
+            .bannerFactoring__box__header {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    // up to 480px
+    .bannerFactoring__inner {
+        margin-bottom: 20px;
+        .bannerFactoring__box {
+            height: auto;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            padding-left: 9px;
+            padding-right: 0px;
+            .bannerFactoring__box__header,
+            .bannerFactoring__box__header div {
+                font-size: 14px;
+                font-weight: 800;
+                line-height: 19px;
+            }
+            .bannerFactoring__box__header {
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

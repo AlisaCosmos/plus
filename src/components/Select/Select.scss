@@ -1,0 +1,406 @@
+@import "../../styles/_vars.scss";
+
+.select {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 320px;
+    border: 2px solid $accentColor;
+    background-color: $bgColor;
+}
+
+.select_showOptions {
+    position: absolute;
+    z-index: 1000;
+}
+.select_showOptionsFirst {
+    z-index: 2000;
+}
+
+.select__questionBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(50px - 4px);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.select__questionBtnTitle {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #4d4d4d;
+    font-family: $generalFont;
+}
+
+.select__questionBtnArrowWrapper {
+    width: 16px;
+}
+.select__questionBtnArrow {
+    width: 100%;
+    object-fit: contain;
+}
+
+.select__options {
+    padding-left: 20px;
+    padding-top: calc(29px - 12px);
+}
+.select__optionsRadioFirst {
+    margin-bottom: 15px;
+}
+.select__optionsRadioSecond {
+    margin-bottom: calc(15px - 2px);
+}
+
+.select__optionsRadio {
+    input[type="radio"] {
+        display: none;
+    }
+    label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        user-select: none;
+    }
+    label:before {
+        content: "";
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        left: 0;
+        top: 4px;
+        background: center / contain no-repeat url(../../assets/imgs/radio.svg);
+    }
+    input[type="radio"]:checked + label:before {
+        background: center / contain no-repeat url(../../assets/imgs/radio-checked.svg);
+    }
+}
+
+.select__optionsText {
+    padding-left: calc(13px + 10px);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #4d4d4d;
+    font-family: $generalFont;
+}
+
+// стили для отображения выбранного параметра
+.select__optionsCurrent {
+    display: flex;
+    align-items: center;
+
+    height: calc(50px - 4px);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+}
+
+// for market page
+.select_market {
+    width: 440px;
+    .select__questionBtn {
+        height: calc(60px - 4px);
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .select__questionBtnTitle {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 27px;
+    }
+    .select__options {
+        padding-left: 30px;
+        padding-top: calc(24px - 14.5px);
+    }
+    .select__optionsRadioFirst {
+        margin-bottom: 15px;
+    }
+    .select__optionsRadioSecond {
+        margin-bottom: calc(30px - 2px);
+    }
+
+    .select__optionsRadio {
+        label:before {
+            width: 14px;
+            height: 14px;
+            top: 7px;
+        }
+    }
+    .select__optionsText {
+        padding-left: calc(14px + 10px);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 27px;
+    }
+
+    // стили для отображения выбранного параметра
+    .select__optionsCurrent {
+        display: flex;
+        align-items: center;
+
+        height: calc(60px - 4px);
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .select {
+        width: 260px;
+    }
+    .select__questionBtn {
+        height: calc(45px - 4px);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .select__questionBtnTitle {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+    }
+    .select__questionBtnArrowWrapper {
+        width: 12px;
+    }
+
+    .select__options {
+        padding-left: 20px;
+        padding-top: calc(15px - 11px);
+    }
+    .select__optionsRadioFirst {
+        margin-bottom: 15px;
+    }
+    .select__optionsRadioSecond {
+        margin-bottom: calc(15px - 2px);
+    }
+
+    .select__optionsRadio {
+        label:before {
+            width: 11px;
+            height: 11px;
+            top: 4px;
+        }
+    }
+    .select__optionsText {
+        padding-left: calc(11px + 8px);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+    }
+
+    // стили для отображения выбранного параметра
+    .select__optionsCurrent {
+        height: calc(45px - 4px);
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: $smallTablet) {
+    .select {
+        width: 280px;
+    }
+    .select__questionBtn {
+        height: calc(40px - 4px);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .select__questionBtnTitle {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    .select__options {
+        padding-left: 15px;
+        padding-top: calc(15px - 10px);
+    }
+    .select__optionsRadioFirst {
+        margin-bottom: 12px;
+    }
+    .select__optionsRadioSecond {
+        margin-bottom: calc(15px - 2px);
+    }
+
+    .select__optionsRadio {
+        label:before {
+            width: 8px;
+            height: 8px;
+            top: 4px;
+        }
+    }
+    .select__optionsText {
+        padding-left: calc(8px + 5px);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    // стили для отображения выбранного параметра
+    .select__optionsCurrent {
+        height: calc(40px - 4px);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .select {
+        width: 225px;
+    }
+    .select__questionBtn {
+        height: calc(40px - 4px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .select__questionBtnTitle {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    .select__options {
+        padding-left: 15px;
+        padding-top: calc(15px - 10px);
+    }
+    .select__optionsRadioFirst {
+        margin-bottom: 12px;
+    }
+    .select__optionsRadioSecond {
+        margin-bottom: calc(15px - 2px);
+    }
+
+    .select__optionsRadio {
+        label:before {
+            width: 8px;
+            height: 8px;
+            top: 4px;
+        }
+    }
+    .select__optionsText {
+        padding-left: calc(8px + 5px);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+
+    // стили для отображения выбранного параметра
+    .select__optionsCurrent {
+        height: calc(40px - 4px);
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 0px;
+    }
+}
+
+// for market page
+@media screen and (max-width: 1180px), screen and (orientation: landscape) and (max-height: 500px) {
+    .select_market {
+        width: 300px;
+        .select__questionBtn {
+            height: calc(50px - 4px);
+            padding-left: 19px;
+            padding-right: 19px;
+        }
+        .select__questionBtnTitle {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+        .select__options {
+            padding-left: 19px;
+            padding-top: calc(29px - 12px);
+        }
+        .select__optionsRadioFirst {
+            margin-bottom: 15px;
+        }
+        .select__optionsRadioSecond {
+            margin-bottom: calc(30px - 2px);
+        }
+
+        .select__optionsRadio {
+            label:before {
+                width: 13px;
+                height: 13px;
+                top: 4.5px;
+            }
+        }
+        .select__optionsText {
+            padding-left: calc(13px + 10px);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+
+        // стили для отображения выбранного параметра
+        .select__optionsCurrent {
+            height: calc(50px - 4px);
+            padding-left: 19px;
+            padding-right: 19px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .select_market {
+        width: 280px;
+        .select__questionBtn {
+            height: calc(40px - 4px);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .select__questionBtnTitle {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+        }
+        .select__options {
+            padding-left: 15px;
+            padding-top: calc(15px - 10px);
+        }
+        .select__optionsRadioFirst {
+            margin-bottom: 12px;
+        }
+        .select__optionsRadioSecond {
+            margin-bottom: calc(15px - 2px);
+        }
+
+        .select__optionsRadio {
+            label:before {
+                width: 8px;
+                height: 8px;
+                top: 5px;
+            }
+        }
+        .select__optionsText {
+            padding-left: calc(8px + 5px);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+        }
+
+        // стили для отображения выбранного параметра
+        .select__optionsCurrent {
+            height: calc(40px - 4px);
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .select_market {
+        width: 230px;
+    }
+}

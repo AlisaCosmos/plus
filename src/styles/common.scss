@@ -1,0 +1,135 @@
+@import "vars";
+@import "fonts";
+@import "btn";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $generalFont;
+  background-color: inherit;
+  font-weight: 400;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container__row {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 40px; // было 20
+}
+
+.container__row_wide {
+  max-width: 1380px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: $textColor;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a,
+button,
+input[type="text"],
+input[type="email"],
+input[type="checkbox"],
+input[type="range"],
+input[type="radio"],
+input[type="tel"],
+textarea,
+label,
+div {
+  -webkit-tap-highlight-color: transparent;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+a {
+  color: $textColor;
+  text-decoration: none;
+  &:focus-visible {
+    color: $accentColor;
+  }
+}
+
+@media (hover: hover) {
+  a:hover {
+    cursor: pointer;
+    color: $accentColor;
+    transition: color 0.1s ease;
+  }
+}
+
+@media (hover: none) {
+  a:hover {
+    color: inherit;
+  }
+  a:active {
+    color: $accentColor;
+    outline: none;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 65.37px;
+  color: $accentColor;
+
+  @media (max-width: $tablet) {
+    font-size: 40px;
+    line-height: 54.47px;
+  }
+
+  @media (max-width: $smallTablet) {
+    font-size: 28px;
+    line-height: 38.13px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 21.79px;
+  }
+}
+
+@supports (padding: max(0px)) {
+  body,
+  header,
+  footer {
+    padding-left: min(0vmin, env(safe-area-inset-left));
+    padding-right: min(0vmin, env(safe-area-inset-right));
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .container__row {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 590px) {
+  .container__row {
+    padding: 0 60px;
+  }
+}

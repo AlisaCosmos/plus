@@ -1,0 +1,43 @@
+@import "../../styles/_vars.scss";
+
+.agreementPage__inner {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .agreementPage__title {
+        color: $accentColor;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    .agreementPage__main {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+    }
+}
+
+@media (max-width: $tablet) {
+    .agreementPage__inner {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .agreementPage__inner {
+        margin-top: 30px;
+        margin-bottom: 45px;
+        .agreementPage__title {
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+        .agreementPage__main {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+        }
+    }
+}

@@ -1,0 +1,328 @@
+@import "../../styles/_vars.scss";
+
+.oneCasePage {
+    margin-top: 65px;
+    .oneCasePage__itemSubtitle {
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 33px;
+        color: #808080;
+        margin-bottom: 40px;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 46px;
+        align-items: center;
+        margin-bottom: 75px;
+        .main__schemeImg {
+            width: 100%;
+            object-fit: contain;
+        }
+        .main__steps {
+            > div {
+                margin-bottom: 30px;
+            }
+            :last-child {
+                margin-bottom: 0px;
+            }
+            .main__stepsTitle {
+                font-size: 24px;
+                font-weight: 800;
+                line-height: 33px;
+            }
+            .main__stepsMainText {
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 27px;
+            }
+        }
+    }
+    .oneCasePage__itemAccentSubtitle {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 44px;
+        color: $accentColor;
+        margin-bottom: 45px;
+    }
+    .advantages {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 310px;
+        column-gap: 215px;
+        margin-bottom: 54px;
+
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+        .advantages__firstContainer {
+            background-image: url(../../assets/imgs/firstadvantage-back.jpg);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            .advantages__firstContainerText {
+                max-width: 390px;
+                margin-top: 56px;
+            }
+        }
+        .advantages__secondContainer {
+            background-image: url(../../assets/imgs/secondadvantage-back.jpg);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            .advantages__secondContainerText {
+                max-width: 380px;
+                margin-top: 56px;
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile) and (max-width: $tablet) {
+    .oneCasePage {
+        margin-top: 50px;
+        .oneCasePage__itemSubtitle {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 0px;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            column-gap: 0px;
+            margin-bottom: 25px;
+            .main__scheme {
+                justify-self: center;
+            }
+            .main__schemeImg {
+                width: auto;
+                height: 100%;
+            }
+            #fruitdelivery {
+                margin-top: 20px;
+                margin-bottom: 15px;
+                img {
+                    max-height: 469px;
+                    max-width: 100%;
+                }
+            }
+            #seafooddelivery {
+                margin-top: 25px;
+                margin-bottom: 10px;
+                img {
+                    max-height: 562px;
+                    max-width: 100%;
+                }
+            }
+            #softwaredevelopment {
+                margin-top: 9px;
+                margin-bottom: 0px;
+                img {
+                    max-height: 464px;
+                    max-width: 100%;
+                }
+            }
+            #itoutsourcing {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                img {
+                    max-height: 558px;
+                    max-width: 100%;
+                }
+            }
+            .main__steps {
+                > div {
+                    margin-bottom: 20px;
+                }
+                :last-child {
+                    margin-bottom: 0px;
+                }
+                .main__stepsTitle {
+                    font-size: 24px;
+                    line-height: 33px;
+                    margin-bottom: 5px;
+                }
+                .main__stepsMainText {
+                    font-size: 20px;
+                    line-height: 27px;
+                }
+            }
+        }
+        .oneCasePage__itemAccentSubtitle {
+            font-size: 24px;
+            line-height: 33px;
+            margin-bottom: 44px;
+        }
+        .advantages {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            column-gap: 56px;
+            margin-bottom: 44px;
+
+            font-size: 18px;
+            line-height: 25px;
+            .advantages__firstContainer {
+                min-height: 200px;
+                .advantages__firstContainerText {
+                    max-width: 320px;
+                    margin-top: 27px;
+                }
+            }
+            .advantages__secondContainer {
+                min-height: 200px;
+                .advantages__secondContainerText {
+                    max-width: 320px;
+                    margin-top: 27px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $mobile) and (max-width: 700px) {
+    .oneCasePage {
+        .oneCasePage__itemAccentSubtitle {
+            text-align: center;
+        }
+        .advantages {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: auto !important;
+            column-gap: 0px !important;
+            row-gap: 46px !important;
+            justify-items: center !important;
+            .advantages__firstContainer {
+                background-position: bottom center !important;
+                .advantages__firstContainerText {
+                    text-align: center;
+                }
+            }
+            .advantages__secondContainer {
+                background-position: bottom center !important;
+                .advantages__secondContainerText {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .oneCasePage {
+        margin-top: 30px;
+        .oneCasePage__itemSubtitle {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 0px;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            column-gap: 0px;
+            margin-bottom: 25px;
+            .main__scheme {
+                justify-self: center;
+            }
+            .main__schemeImg {
+                width: auto;
+                height: 100%;
+            }
+            #fruitdelivery {
+                margin-top: 5px;
+                margin-bottom: 0px;
+                img {
+                    max-height: 214px;
+                    max-width: 100%;
+                }
+            }
+            #seafooddelivery {
+                margin-top: 5px;
+                margin-bottom: 2px;
+                img {
+                    max-height: 310px;
+                    max-width: 100%;
+                }
+            }
+            #softwaredevelopment {
+                margin-top: 1px;
+                margin-bottom: 5px;
+                img {
+                    max-height: 213px;
+                    max-width: 100%;
+                }
+            }
+            #itoutsourcing {
+                margin-top: 10px;
+                margin-bottom: 15px;
+                img {
+                    max-height: 292px;
+                    max-width: 100%;
+                }
+            }
+            .main__steps {
+                > div {
+                    margin-bottom: 15px;
+                }
+                :last-child {
+                    margin-bottom: 0px;
+                }
+                .main__stepsTitle {
+                    font-size: 14px;
+                    line-height: 19px;
+                    margin-bottom: 0px;
+                }
+                .main__stepsMainText {
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+            }
+        }
+        .oneCasePage__itemAccentSubtitle {
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 17px;
+            text-align: center;
+        }
+        .advantages {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            column-gap: 0px;
+            row-gap: 46px;
+            margin-bottom: 16px;
+            justify-items: center;
+
+            font-size: 10px;
+            line-height: 14px;
+            .advantages__firstContainer {
+                background-position: bottom center;
+                min-height: 100px;
+                .advantages__firstContainerText {
+                    max-width: 253px;
+                    margin-top: 8px;
+                    text-align: center;
+                }
+                .advantages__containerText {
+                    max-width: 200px !important;
+                    margin-top: 20px !important;
+                }
+            }
+            .advantages__secondContainer {
+                min-height: 100px;
+                background-position: bottom center;
+                .advantages__secondContainerText {
+                    max-width: 241px;
+                    margin-top: 11px;
+                    text-align: center;
+                }
+                .advantages__containerText {
+                    max-width: 200px !important;
+                    margin-top: 19px !important;
+                }
+            }
+        }
+    }
+}

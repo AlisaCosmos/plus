@@ -1,0 +1,125 @@
+@import "../../styles/_vars.scss";
+
+.buttonRequest {
+  overflow: hidden;
+}
+
+.buttonRequest__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: transparent;
+  transition: transform 200ms ease;
+}
+
+.buttonRequest__inner_active {
+  transform: translateX(100%);
+}
+
+.buttonRequest__arrowWrapper {
+  display: flex;
+  align-items: center;
+  width: 0;
+  height: 17px;
+  overflow: hidden;
+  margin-left: 10px;
+  transition: width 0.1s ease-in-out;
+}
+
+.buttonRequest:hover .buttonRequest__arrowWrapper,
+.buttonRequest_focus .buttonRequest__arrowWrapper {
+  width: 17px;
+  margin-left: 10px;
+}
+
+.buttonRequest__arrow {
+  width: 17px;
+}
+
+.buttonRequest__arrowWrapper_small {
+  width: 0;
+  height: 9px;
+  margin-left: 5px;
+
+  & .buttonRequest__arrow {
+    width: 9px;
+  }
+}
+
+.buttonRequest:hover .buttonRequest__arrowWrapper_small,
+.buttonRequest_focus .buttonRequest__arrowWrapper_small {
+  width: 9px;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: $tablet) {
+  .buttonRequest__arrowWrapper {
+    width: 0;
+    overflow: hidden;
+    margin-left: 0;
+  }
+
+  .buttonRequest:hover .buttonRequest__arrowWrapper {
+    width: 0;
+    overflow: hidden;
+    margin-left: 0;
+  }
+
+  .buttonRequest .buttonRequest__inner_active .buttonRequest__arrowWrapper {
+    width: 17px;
+    margin-left: 10px;
+    overflow: visible;
+  }
+
+  .buttonRequest__arrowWrapper_small {
+    width: 0;
+    height: 14px;
+
+    & .buttonRequest__arrow {
+      width: 14px;
+    }
+  }
+
+  .buttonRequest:hover .buttonRequest__arrowWrapper_small {
+    margin-left: 0;
+  }
+
+  .buttonRequest .buttonRequest__inner_active .buttonRequest__arrowWrapper_small {
+    width: 14px;
+    margin-left: 7px;
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .buttonRequest .buttonRequest__inner_active .buttonRequest__arrowWrapper {
+    width: 10px;
+    margin-left: 5px;
+  }
+
+  .buttonRequest__arrowWrapper {
+    height: 10px;
+  }
+
+  .buttonRequest__arrow {
+    width: 10px;
+  }
+
+  .buttonRequest__arrowWrapper_small {
+    height: 10px;
+
+    & .buttonRequest__arrow {
+      width: 10px;
+    }
+  }
+
+  .buttonRequest:hover .buttonRequest__arrowWrapper_small {
+    margin-left: 0;
+  }
+
+  .buttonRequest .buttonRequest__inner_active .buttonRequest__arrowWrapper_small {
+    width: 10px;
+    margin-left: 5px;
+  }
+}
